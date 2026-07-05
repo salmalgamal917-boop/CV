@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مولد السيرة الذاتية</title>
+    <style>
+        /* إعدادات الخطوط والألوان العامة */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* حاوية السيرة الذاتية */
+        .cv-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* الهيدر (الاسم والبيانات الأساسية) */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            color: #7f8c8d;
+            font-size: 16px;
+        }
+
+        /* الأقسام الرئيسية */
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            color: #3498db;
+            font-size: 20px;
+            border-bottom: 1px solid #eceff1;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* تفاصيل الوظائف والتعليم */
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .item-title {
+            font-weight: bold;
+            color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item-subtitle {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        /* المهارات */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .skills-list li {
+            background: #e8f4fd;
+            color: #3498db;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* زر الطباعة */
+        .print-btn {
+            display: block;
+            width: 150px;
+            margin: 20px auto 0 auto;
+            padding: 10px 20px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .print-btn:hover {
+            background-color: #27ae60;
+        }
+
+        /* إعدادات الطباعة لتحويل الـ CV إلى PDF بشكل ممتاز */
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .cv-container {
+                box-shadow: none;
+                padding: 0;
+                margin: 0;
+                max-width: 100%;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <div class="header">
+            <h1>أحمد محمد</h1>
+            <p>مطور ويب واجهات أمامية (Front-End Developer)</p>
+            <p>بريد إلكتروني: ahmed@example.com | هاتف: 0123456789 | المدينة، الدولة</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">الملخص المهني</h2>
+            <p>مطور ويب شغوف ولديه خبرة في بناء مواقع وتطبيقات ويب متجاوبة وسريعة باستخدام أحدث التقنيات. أسعى دائماً لتقديم تجربة مستخدم سلسة ومميزة.</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">الخبرة المهنية</h2>
+            
+            <div class="item">
+                <div class="item-title">
+                    <span>مطور ويب أول</span>
+                    <span>2024 - الحالي</span>
+                </div>
+                <div class="item-subtitle">شركة الحلول الرقمية</div>
+                <p>تطوير وتحسين الواجهات الأمامية لمنصات الشركة، والعمل على رفع كفاءة وسرعة المواقع بنسبة 30%.</p>
+            </div>
+
+            <div class="item">
+                <div class="item-title">
+                    <span>مطور ويب مبتدئ</span>
+                    <span>2022 - 2024</span>
+                </div>
+                <div class="item-subtitle">مؤسسة التقنية الذكية</div>
+                <p>المشاركة في بناء المواقع التعريفية للعملاء وتحويل التصاميم من Figma إلى أكواد HTML و CSS بدقة عالية.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">التعليم</h2>
+            <div class="item">
+                <div class="item-title">
+                    <span>بكالوريوس علوم الحاسب</span>
+                    <span>2018 - 2022</span>
+                </div>
+                <div class="item-subtitle">جامعة المدينة للعلوم والتكنولوجيا</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">المهارات</h2>
+            <ul class="skills-list">
+                <li>HTML5 & CSS3</li>
+                <li>JavaScript (ES6+)</li>
+                <li>Responsive Design</li>
+                <li>Git & GitHub</li>
+                <li>Bootstrap / Tailwind</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">طباعة / حفظ PDF</button>
+
+</body>
+</html>
